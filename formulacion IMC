@@ -1,0 +1,59 @@
+using System;
+namespace nutricion
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double total, altura, peso;
+            Console.WriteLine("vamos a calcular tu IMC");
+            Console.write("cuantas personas deseas evaluar:");
+            int n = int.parse(Console.Readline());
+            for (int i = 1; i<=n;i++)
+            {
+                
+            Console.Write("inserta tu peso");
+            peso = double.parse(Console.Readline());
+            Console.Write("Inserta el altura:");
+            altura = double.parse(Console.Readline());
+            total = peso/(altura*altura);
+            Console.WriteLine("el total de IMS es:"+total.toString("F2"));
+            
+            if (total<18.5)
+            Console.WriteLine("Tienes un indice de masa corporal bajo");
+            if (total>18.5 && total<24.9)
+            Console.WriteLine("Tienes un indice de masa corporal normal");
+            if (total>=24.9 && total<30)
+            Console.WriteLine("Tienes un indice de masa corporal en sobrepeso");
+            if (total>=30)
+            Console.WriteLine("Tienes un indice de masa corporal en obesidad");
+            
+            }
+            Console.WriteLine("vamos a calcular tus calorias del dia");
+            Console.Write("inserta tu edad");
+            edad = double.parse(Console.Readline());
+            Console.Write("inserta tu factor de 1 a 2 en el cual 1 es una persona sedentaria y 2 es un atleta profecional");
+            Factor = double.parse(Console.Readline());
+            Console.WriteLine("Dinos tu sexo:");
+            Console.WriteLine("1 - masculino");
+            Console.WriteLine("2 - femenino");
+             s = double.parse(Console.Readline());
+            if (s = 1)
+            caloriasm = [66+(13.7*peso=)+(5*altura)-(6.8*edad)*Factor];
+            Console.WriteLine("debes consumir un total de calorias de:"+caloriasm);
+            
+            if (s = 2)
+            caloriasf = [655+(9.6*peso=)+(1.8*altura)-(4.7*edad)*Factor];
+            Console.WriteLine("debes consumir un total de calorias de:"+caloriasf);
+            
+
+
+            
+
+
+
+
+        
+        }
+    }
+}
